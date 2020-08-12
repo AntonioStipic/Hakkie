@@ -1,0 +1,12 @@
+* {
+  //transition: all 0.5s;
+}
+
+.sidenav {
+  width: 250px;
+}
+
+:host .active-link {
+  color: var(--primary-theme);
+  border-right: 3px solid var(--primary-theme);
+}

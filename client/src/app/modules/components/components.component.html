@@ -1,0 +1,17 @@
+<mat-toolbar color="primary" class="flex">
+  <span>Components</span>
+  <div class="flex-1"></div>
+  <button mat-icon-button>
+    <mat-icon>add</mat-icon>
+  </button>
+</mat-toolbar>
+
+<div class="flex w-auto grid">
+  <div class="flex-1 p-a-s h-full">
+    <ngx-monaco-editor [options]="editorOptions" [(ngModel)]="monacoCode" (ngModelChange)="updateCode($event)"
+                       class="editor"></ngx-monaco-editor>
+  </div>
+  <div class="flex-1 p-a-s">
+    <app-renderer [code]="code"></app-renderer>
+  </div>
+</div>

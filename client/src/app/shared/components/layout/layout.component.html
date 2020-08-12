@@ -1,0 +1,19 @@
+<mat-drawer-container class="w-full" style="height: 100vh;">
+  <mat-drawer mode="side" opened class="sidenav">
+
+<!--    <div class="w-full m-t-m m-b-xs flex jc-center">-->
+    <div class="w-full m-t-m m-b-xs flex jc-center">
+      <h1>HAKKIE</h1>
+    </div>
+
+    <mat-action-list>
+      <a mat-list-item *ngFor="let link of links" [routerLink]="link.path" routerLinkActive="active-link">
+        <mat-icon matListIcon>{{link.icon}}</mat-icon>
+        <span matLine>{{link.label}}</span>
+      </a>
+    </mat-action-list>
+  </mat-drawer>
+  <mat-drawer-content>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>
